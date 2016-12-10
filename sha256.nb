@@ -10,16 +10,21 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     34329,       1100]
-NotebookOptionsPosition[     32497,       1031]
-NotebookOutlinePosition[     32856,       1047]
-CellTagsIndexPosition[     32813,       1044]
+NotebookDataLength[     35428,       1122]
+NotebookOptionsPosition[     33556,       1052]
+NotebookOutlinePosition[     33915,       1068]
+CellTagsIndexPosition[     33872,       1065]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"message", "=", "\"\<Let's hash something!\>\""}], ";"}]], "Input",
+ CellChangeTimes->{3.6903198690597563`*^9}],
 
 Cell[CellGroupData[{
+
 Cell["Built in SHA-256", "Title",
  CellChangeTimes->{{3.689959194499913*^9, 3.68995919872351*^9}}],
 
@@ -30,19 +35,21 @@ Cell[BoxData[
   RowBox[{"IntegerString", "[", 
    RowBox[{
     RowBox[{"Hash", "[", 
-     RowBox[{"\"\<SHA-256 is awesome!\>\"", ",", "\"\<SHA256\>\""}], "]"}], 
-    ",", "16"}], "]"}]}]], "Input",
+     RowBox[{"message", ",", "\"\<SHA256\>\""}], "]"}], ",", "16"}], 
+   "]"}]}]], "Input",
  CellChangeTimes->{{3.689959120467094*^9, 3.68995917712467*^9}, {
    3.689959208140582*^9, 3.6899592101637774`*^9}, 3.69013666453279*^9, {
-   3.690139495547257*^9, 3.690139497461176*^9}}],
+   3.690139495547257*^9, 3.690139497461176*^9}, 3.69031981605027*^9, {
+   3.690319874380629*^9, 3.690319875723572*^9}}],
 
 Cell[BoxData["\<\"\
-3e6d9106bfee80ec988bbf57c762dca6df6f3c43514e72a11fc72ac7aa4dc78f\"\>"], \
+b2d0ac07d43d14d16fdb62881d5159908dbfc537ad9db45e7b83c982859848a2\"\>"], \
 "Output",
  CellChangeTimes->{
   3.689959130759963*^9, {3.6899591777623*^9, 3.689959210834139*^9}, 
    3.690084833376423*^9, 3.69013481145793*^9, 3.690136665085846*^9, 
-   3.690139498730047*^9}]
+   3.690139498730047*^9, 3.690319818273872*^9, {3.6903198583341827`*^9, 
+   3.690319877635025*^9}}]
 }, Open  ]]
 }, Open  ]],
 
@@ -97,7 +104,8 @@ Cell[BoxData[
  CellChangeTimes->{{3.689959969597271*^9, 3.68995997388929*^9}, {
    3.6899600405424*^9, 3.689960068637328*^9}, 3.6899601711031027`*^9, 
    3.690084833533553*^9, 3.6901348115902557`*^9, 3.690137659916897*^9, 
-   3.6901377619673243`*^9}]
+   3.6901377619673243`*^9, 3.6903198184479923`*^9, {3.6903198585692167`*^9, 
+   3.6903198777084827`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -134,8 +142,10 @@ Cell[BoxData[
    ",", "1955562222", ",", "2024104815", ",", "2227730452", ",", "2361852424",
     ",", "2428436474", ",", "2756734187", ",", "3204031479", ",", 
    "3329325298"}], "}"}]], "Output",
- CellChangeTimes->{3.689960189994841*^9, 3.6900848335815907`*^9, 
-  3.690134811648682*^9, 3.6901376753591213`*^9, 3.6901377639156723`*^9}]
+ CellChangeTimes->{
+  3.689960189994841*^9, 3.6900848335815907`*^9, 3.690134811648682*^9, 
+   3.6901376753591213`*^9, 3.6901377639156723`*^9, 3.69031981849679*^9, {
+   3.6903198586381617`*^9, 3.6903198777755413`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -198,7 +208,9 @@ Cell[BoxData[
      1541459225,
      Editable->False],
     BaseForm[#, 16]& ]}], "}"}]], "Output",
- CellChangeTimes->{3.690137779037527*^9}]
+ CellChangeTimes->{
+  3.690137779037527*^9, 3.690319818544105*^9, {3.690319858723872*^9, 
+   3.690319877838435*^9}}]
 }, Open  ]]
 }, Open  ]],
 
@@ -215,8 +227,9 @@ Cell[BoxData[
  CellChangeTimes->{{3.689962382435659*^9, 3.689962384994169*^9}}],
 
 Cell[BoxData["128"], "Output",
- CellChangeTimes->{3.6899623878869867`*^9, 3.690084833631899*^9, 
-  3.690134811716648*^9}]
+ CellChangeTimes->{
+  3.6899623878869867`*^9, 3.690084833631899*^9, 3.690134811716648*^9, 
+   3.6903198186150303`*^9, {3.6903198587900352`*^9, 3.690319877905602*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -233,9 +246,6 @@ Cell[BoxData[
        RowBox[{"msg", ",", "l"}], "}"}], ","}]}]}], "*)"}], 
   "\[IndentingNewLine]", 
   RowBox[{
-   RowBox[{
-    RowBox[{"message", "=", "\"\<SHA-256 is awesome!\>\""}], ";"}], 
-   "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"msg", "=", 
      RowBox[{"ToCharacterCode", "[", "message", "]"}]}], ";"}], 
@@ -274,63 +284,34 @@ Cell[BoxData[
   3.689962669267234*^9}, {3.689962707852666*^9, 3.689962754431981*^9}, {
   3.68996279286298*^9, 3.689962853634973*^9}, {3.68996293843347*^9, 
   3.689962975173798*^9}, {3.6900848450178013`*^9, 3.690084849173402*^9}, {
-  3.6901351573525267`*^9, 3.690135158718091*^9}}],
+  3.6901351573525267`*^9, 3.690135158718091*^9}, {3.6903198562692003`*^9, 
+  3.690319863106947*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
    TagBox[
     InterpretationBox[
-     SubscriptBox["\<\"53\"\>", "\<\"16\"\>"],
-     83,
+     SubscriptBox["\<\"4c\"\>", "\<\"16\"\>"],
+     76,
      Editable->False],
     BaseForm[#, 16]& ], ",", 
    TagBox[
     InterpretationBox[
-     SubscriptBox["\<\"48\"\>", "\<\"16\"\>"],
-     72,
+     SubscriptBox["\<\"65\"\>", "\<\"16\"\>"],
+     101,
      Editable->False],
     BaseForm[#, 16]& ], ",", 
    TagBox[
     InterpretationBox[
-     SubscriptBox["\<\"41\"\>", "\<\"16\"\>"],
-     65,
+     SubscriptBox["\<\"74\"\>", "\<\"16\"\>"],
+     116,
      Editable->False],
     BaseForm[#, 16]& ], ",", 
    TagBox[
     InterpretationBox[
-     SubscriptBox["\<\"2d\"\>", "\<\"16\"\>"],
-     45,
-     Editable->False],
-    BaseForm[#, 16]& ], ",", 
-   TagBox[
-    InterpretationBox[
-     SubscriptBox["\<\"32\"\>", "\<\"16\"\>"],
-     50,
-     Editable->False],
-    BaseForm[#, 16]& ], ",", 
-   TagBox[
-    InterpretationBox[
-     SubscriptBox["\<\"35\"\>", "\<\"16\"\>"],
-     53,
-     Editable->False],
-    BaseForm[#, 16]& ], ",", 
-   TagBox[
-    InterpretationBox[
-     SubscriptBox["\<\"36\"\>", "\<\"16\"\>"],
-     54,
-     Editable->False],
-    BaseForm[#, 16]& ], ",", 
-   TagBox[
-    InterpretationBox[
-     SubscriptBox["\<\"20\"\>", "\<\"16\"\>"],
-     32,
-     Editable->False],
-    BaseForm[#, 16]& ], ",", 
-   TagBox[
-    InterpretationBox[
-     SubscriptBox["\<\"69\"\>", "\<\"16\"\>"],
-     105,
+     SubscriptBox["\<\"27\"\>", "\<\"16\"\>"],
+     39,
      Editable->False],
     BaseForm[#, 16]& ], ",", 
    TagBox[
@@ -347,20 +328,32 @@ Cell[BoxData[
     BaseForm[#, 16]& ], ",", 
    TagBox[
     InterpretationBox[
+     SubscriptBox["\<\"68\"\>", "\<\"16\"\>"],
+     104,
+     Editable->False],
+    BaseForm[#, 16]& ], ",", 
+   TagBox[
+    InterpretationBox[
      SubscriptBox["\<\"61\"\>", "\<\"16\"\>"],
      97,
      Editable->False],
     BaseForm[#, 16]& ], ",", 
    TagBox[
     InterpretationBox[
-     SubscriptBox["\<\"77\"\>", "\<\"16\"\>"],
-     119,
+     SubscriptBox["\<\"73\"\>", "\<\"16\"\>"],
+     115,
      Editable->False],
     BaseForm[#, 16]& ], ",", 
    TagBox[
     InterpretationBox[
-     SubscriptBox["\<\"65\"\>", "\<\"16\"\>"],
-     101,
+     SubscriptBox["\<\"68\"\>", "\<\"16\"\>"],
+     104,
+     Editable->False],
+    BaseForm[#, 16]& ], ",", 
+   TagBox[
+    InterpretationBox[
+     SubscriptBox["\<\"20\"\>", "\<\"16\"\>"],
+     32,
      Editable->False],
     BaseForm[#, 16]& ], ",", 
    TagBox[
@@ -385,6 +378,36 @@ Cell[BoxData[
     InterpretationBox[
      SubscriptBox["\<\"65\"\>", "\<\"16\"\>"],
      101,
+     Editable->False],
+    BaseForm[#, 16]& ], ",", 
+   TagBox[
+    InterpretationBox[
+     SubscriptBox["\<\"74\"\>", "\<\"16\"\>"],
+     116,
+     Editable->False],
+    BaseForm[#, 16]& ], ",", 
+   TagBox[
+    InterpretationBox[
+     SubscriptBox["\<\"68\"\>", "\<\"16\"\>"],
+     104,
+     Editable->False],
+    BaseForm[#, 16]& ], ",", 
+   TagBox[
+    InterpretationBox[
+     SubscriptBox["\<\"69\"\>", "\<\"16\"\>"],
+     105,
+     Editable->False],
+    BaseForm[#, 16]& ], ",", 
+   TagBox[
+    InterpretationBox[
+     SubscriptBox["\<\"6e\"\>", "\<\"16\"\>"],
+     110,
+     Editable->False],
+    BaseForm[#, 16]& ], ",", 
+   TagBox[
+    InterpretationBox[
+     SubscriptBox["\<\"67\"\>", "\<\"16\"\>"],
+     103,
      Editable->False],
     BaseForm[#, 16]& ], ",", 
    TagBox[
@@ -647,44 +670,38 @@ Cell[BoxData[
     BaseForm[#, 16]& ], ",", 
    TagBox[
     InterpretationBox[
-     SubscriptBox["\<\"0\"\>", "\<\"16\"\>"],
-     0,
-     Editable->False],
-    BaseForm[#, 16]& ], ",", 
-   TagBox[
-    InterpretationBox[
-     SubscriptBox["\<\"0\"\>", "\<\"16\"\>"],
-     0,
-     Editable->False],
-    BaseForm[#, 16]& ], ",", 
-   TagBox[
-    InterpretationBox[
-     SubscriptBox["\<\"98\"\>", "\<\"16\"\>"],
-     152,
+     SubscriptBox["\<\"a8\"\>", "\<\"16\"\>"],
+     168,
      Editable->False],
     BaseForm[#, 16]& ]}], "}"}]], "Output",
  CellChangeTimes->{{3.689962457581232*^9, 3.689962590385091*^9}, 
    3.689962635824613*^9, {3.68996270898271*^9, 3.689962754822687*^9}, 
    3.689962797292835*^9, {3.689962828163542*^9, 3.689962854022889*^9}, {
    3.6899629529481583`*^9, 3.6899629755197897`*^9}, {3.6900848336839247`*^9, 
-   3.6900848497219133`*^9}, 3.690134811769246*^9, 3.690135159324896*^9}],
+   3.6900848497219133`*^9}, 3.690134811769246*^9, 3.690135159324896*^9, {
+   3.690319818679659*^9, 3.6903198267698097`*^9}, {3.690319857018372*^9, 
+   3.690319877972137*^9}}],
 
-Cell[BoxData["\<\"SHA-256 is awesome!\.80\.00\.00\.00\.00\.00\.00\.00\.00\.00\
+Cell[BoxData["\<\"Let's hash something!\.80\.00\.00\.00\.00\.00\.00\.00\.00\
 \.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\
-\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.98\"\>"], \
+\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\[DoubleDot]\"\>"], \
 "Output",
  CellChangeTimes->{{3.689962457581232*^9, 3.689962590385091*^9}, 
    3.689962635824613*^9, {3.68996270898271*^9, 3.689962754822687*^9}, 
    3.689962797292835*^9, {3.689962828163542*^9, 3.689962854022889*^9}, {
    3.6899629529481583`*^9, 3.6899629755197897`*^9}, {3.6900848336839247`*^9, 
-   3.6900848497219133`*^9}, 3.690134811769246*^9, 3.6901351593399277`*^9}],
+   3.6900848497219133`*^9}, 3.690134811769246*^9, 3.690135159324896*^9, {
+   3.690319818679659*^9, 3.6903198267698097`*^9}, {3.690319857018372*^9, 
+   3.690319877984315*^9}}],
 
 Cell[BoxData["64"], "Output",
  CellChangeTimes->{{3.689962457581232*^9, 3.689962590385091*^9}, 
    3.689962635824613*^9, {3.68996270898271*^9, 3.689962754822687*^9}, 
    3.689962797292835*^9, {3.689962828163542*^9, 3.689962854022889*^9}, {
    3.6899629529481583`*^9, 3.6899629755197897`*^9}, {3.6900848336839247`*^9, 
-   3.6900848497219133`*^9}, 3.690134811769246*^9, 3.690135159347239*^9}]
+   3.6900848497219133`*^9}, 3.690134811769246*^9, 3.690135159324896*^9, {
+   3.690319818679659*^9, 3.6903198267698097`*^9}, {3.690319857018372*^9, 
+   3.690319877989846*^9}}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -749,8 +766,10 @@ Cell[BoxData[
  DynamicBox[ToBoxes[
    Length[$CellContext`w], StandardForm],
   ImageSizeCache->{16., {1., 9.}}]], "Output",
- CellChangeTimes->{3.690135260024665*^9, 3.690135562125341*^9, 
-  3.690135636182287*^9, 3.6901357440662603`*^9, 3.690135845414954*^9}]
+ CellChangeTimes->{
+  3.690135260024665*^9, 3.690135562125341*^9, 3.690135636182287*^9, 
+   3.6901357440662603`*^9, 3.690135845414954*^9, 3.690319819038124*^9, {
+   3.690319858988365*^9, 3.690319878089617*^9}}]
 }, Open  ]],
 
 Cell[BoxData[{
@@ -1017,14 +1036,16 @@ Cell[BoxData[{
   3.690139472836438*^9, 3.690139504004737*^9}}],
 
 Cell[BoxData["\<\"\
-3e6d9106bfee80ec988bbf57c762dca6df6f3c43514e72a11fc72ac7aa4dc78f\"\>"], \
+b2d0ac07d43d14d16fdb62881d5159908dbfc537ad9db45e7b83c982859848a2\"\>"], \
 "Output",
- CellChangeTimes->{{3.690139480166668*^9, 3.6901395043463078`*^9}}],
+ CellChangeTimes->{{3.690139480166668*^9, 3.6901395043463078`*^9}, 
+   3.690319819280089*^9, {3.69031985922126*^9, 3.69031987832309*^9}}],
 
 Cell[BoxData["\<\"\
-3e6d9106bfee80ec988bbf57c762dca6df6f3c43514e72a11fc72ac7aa4dc78f\"\>"], \
+b2d0ac07d43d14d16fdb62881d5159908dbfc537ad9db45e7b83c982859848a2\"\>"], \
 "Output",
- CellChangeTimes->{{3.690139480166668*^9, 3.690139504357333*^9}}]
+ CellChangeTimes->{{3.690139480166668*^9, 3.6901395043463078`*^9}, 
+   3.690319819280089*^9, {3.69031985922126*^9, 3.690319878331016*^9}}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -1046,59 +1067,60 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[558, 20, 145, 3, 28, "Input"],
 Cell[CellGroupData[{
-Cell[580, 22, 98, 1, 92, "Title"],
+Cell[728, 27, 98, 1, 92, "Title"],
 Cell[CellGroupData[{
-Cell[703, 27, 410, 9, 28, "Input"],
-Cell[1116, 38, 287, 6, 62, "Output"]
+Cell[851, 32, 460, 10, 28, "Input"],
+Cell[1314, 44, 361, 7, 28, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1452, 50, 103, 1, 92, "Title"],
+Cell[1724, 57, 103, 1, 92, "Title"],
 Cell[CellGroupData[{
-Cell[1580, 55, 102, 1, 65, "Chapter"],
-Cell[1685, 58, 762, 17, 35, "Input"],
+Cell[1852, 62, 102, 1, 65, "Chapter"],
+Cell[1957, 65, 762, 17, 35, "Input"],
 Cell[CellGroupData[{
-Cell[2472, 79, 352, 9, 28, "Input"],
-Cell[2827, 90, 451, 9, 46, "Output"]
+Cell[2744, 86, 352, 9, 28, "Input"],
+Cell[3099, 97, 529, 10, 46, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3315, 104, 380, 10, 28, "Input"],
-Cell[3698, 116, 1459, 21, 182, "Output"]
+Cell[3665, 112, 380, 10, 28, "Input"],
+Cell[4048, 124, 1538, 23, 182, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5194, 142, 196, 5, 28, "Input"],
-Cell[5393, 149, 1350, 51, 46, "Output"]
+Cell[5623, 152, 196, 5, 28, "Input"],
+Cell[5822, 159, 1425, 53, 46, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6792, 206, 105, 1, 65, "Chapter"],
+Cell[7296, 218, 105, 1, 65, "Chapter"],
 Cell[CellGroupData[{
-Cell[6922, 211, 167, 3, 28, "Input"],
-Cell[7092, 216, 121, 2, 28, "Output"]
+Cell[7426, 223, 167, 3, 28, "Input"],
+Cell[7596, 228, 197, 3, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7250, 223, 2105, 53, 165, "Input"],
-Cell[9358, 278, 9490, 391, 80, "Output"],
-Cell[18851, 671, 603, 8, 28, "Output"],
-Cell[19457, 681, 390, 5, 28, "Output"]
+Cell[7830, 236, 2048, 51, 148, "Input"],
+Cell[9881, 289, 9603, 393, 80, "Output"],
+Cell[19487, 684, 705, 10, 28, "Output"],
+Cell[20195, 696, 492, 7, 28, "Output"]
 }, Open  ]],
-Cell[19862, 689, 630, 18, 35, "Input"],
-Cell[20495, 709, 655, 18, 35, "Input"]
+Cell[20702, 706, 630, 18, 35, "Input"],
+Cell[21335, 726, 655, 18, 35, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[21187, 732, 393, 5, 65, "Chapter"],
+Cell[22027, 749, 393, 5, 65, "Chapter"],
 Cell[CellGroupData[{
-Cell[21605, 741, 208, 4, 28, "Input"],
-Cell[21816, 747, 258, 5, 28, "Output"]
+Cell[22445, 758, 208, 4, 28, "Input"],
+Cell[22656, 764, 334, 7, 28, "Output"]
 }, Open  ]],
-Cell[22089, 755, 3929, 92, 264, "Input"],
-Cell[26021, 849, 540, 15, 28, "Input"],
-Cell[26564, 866, 4563, 119, 422, "Input"],
+Cell[23005, 774, 3929, 92, 264, "Input"],
+Cell[26937, 868, 540, 15, 28, "Input"],
+Cell[27480, 885, 4563, 119, 422, "Input"],
 Cell[CellGroupData[{
-Cell[31152, 989, 959, 27, 69, "Input"],
-Cell[32114, 1018, 171, 3, 28, "Output"],
-Cell[32288, 1023, 169, 3, 86, "Output"]
+Cell[32068, 1008, 959, 27, 69, "Input"],
+Cell[33030, 1037, 241, 4, 28, "Output"],
+Cell[33274, 1043, 242, 4, 28, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
