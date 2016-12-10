@@ -18,14 +18,10 @@
 
 		<h2>Enter your message here:</h2>
 
-		<input type="text" id="message" value="Let's hash something!">
+		<input type="text" id="message" value="Let's hash something! Long enough to have multiple chunks...">
 
 		<p class="note center">
-			Bytes representation: <span data="bytemsg" class="bytes">&nbsp;</span>
-		</p>
-
-		<p class="note center">
-			Resulting hash: <span data="hash" class="bytes">&nbsp;</span>
+			Resulting hash: <span data="hash">&nbsp;</span>
 		</p>
 
 		<h2>Step 1. Preparing the message.</h2>
@@ -35,8 +31,10 @@
 		</p>
 
 		<p class="important center">
+			<span class="note center">Your message</span>
 			<span data="bytemsg" class="block bytes x16"></span>
 			<span class="block">↓</span>
+			<span class="note center">Normalized message</span>
 			<span data="normalized" class="block bytes x16"></span>
 		</p>
 
@@ -145,12 +143,123 @@
 		<p class="center">
 	        s<sub>1</sub> = (w<sub>i-2</sub> >>> 17) ⊕ (w<sub>i-2</sub> >>> 19) ⊕ (w<sub>i-2</sub> >> 10)
         </p>
-	    <p> >>> means right rotation (circular shift of bits when bits are removed from the end of the word and prepended to the beginning), >> means right shift (last bits are removed, zeros are prepended). For example 100111<b>01</b> >>> 2 = <b>01</b>100111 and 10011101 >> 2 = <b>00</b>100111</p>
+	    <p>
+	    	<code>>>></code> means right rotation (circular shift of bits when bits are removed from the end of the word and prepended to the beginning), <code>>></code> means right shift (last bits are removed, zeros are prepended). For example <code>100111<b>01</b> >>> 2 = <b>01</b>100111</code> and <code>10011101 >> 2 = <b>00</b>100111</code>. Symbol <code>⊕</code> means XOR operation.
+	    </p>
+
+		<p>
+			Here you can see how every word is calculated:
+		</p>
+
+		<p class="center important" id="w">
+			<span class="block">
+				<a id="nextchunk" class="noselect multichunks">←</a>
+				<b>chunk<sub><span class="chunk">0</span></sub></b>
+				<a id="prevchunk" class="noselect multichunks">→</a>
+			</span>
+			<span class="block">
+				<a id="nextw" class="noselect">←</a>
+				<b>w<sub><span class="multichunks"><span class="chunk">0</span>,</span><span class="num">0</span></sub></b>
+				<a id="prevw" class="noselect">→</a>
+			</span>
+			<span class="note" id="w-source">Directly from message</span>
+			<span class="block bytes x16 gray" data="w-msg"></span>
+			<span class="block">↓</span>
+			<span class="w-calc">
+				<span class="note" data="wx"
+						data-offset="16" data-repr="note"></span>
+				<span class="block bytes" data="wx"
+						data-offset="16" data-repr="bin"></span>
+				<span class="block">+</span>
+				<span class="note" data="wx"
+						data-offset="7" data-repr="note"></span>
+				<span class="block bytes" data="wx"
+						data-offset="7" data-repr="bin"></span>
+				<span class="block">+</span>
+				<span class="note" data="s0"></span>
+				<span class="block bytes" data="s0-bin"></span>
+				<span class="block">+</span>
+				<span class="note" data="s1"></span>
+				<span class="block bytes" data="s1-bin"></span>
+				<span class="block">=</span>
+				<span class="block bytes final" data="wx"
+						data-offset="0" data-repr="bin"></span>
+				<span class="block final">↓</span>
+			</span>
+			<span class="block bytes final" data="w"></span>
+	    </p>
+
+		<span class="w-calc">
+			<p>
+				If it is not completely clear how s<sub>0</sub> and s<sub>1</sub> were calculated, you can look at it closer:
+			</p>
+			<p class="center">
+				<a id="show-s">Show how to calculate s<sub>0</sub> and s<sub>1</sub></a>
+			</p>
+			<p class="center semi-important" id="scalc">
+				<span class="block">
+					<b>s<sub>0</sub></b>
+				</span>
+				<span class="note" data="wx"
+						data-offset="15" data-repr="note"></span>
+				<span class="block bytes gray" data="wx"
+						data-offset="15" data-repr="bin"></span>
+				<span class="block">↓</span>
+				<span class="note" data="wx"
+						data-offset="15" data-repr="note" data-rotate="7"></span>
+				<span class="block bytes" data="wx"
+						data-offset="15" data-repr="bin" data-rotate="7"></span>
+				<span class="block">⊕</span>
+				<span class="note" data="wx"
+						data-offset="15" data-repr="note" data-rotate="18"></span>
+				<span class="block bytes" data="wx"
+						data-offset="15" data-repr="bin" data-rotate="18"></span>
+				<span class="block">⊕</span>
+				<span class="note" data="wx"
+						data-offset="15" data-repr="note" data-shift="3"></span>
+				<span class="block bytes" data="wx"
+						data-offset="15" data-repr="bin" data-shift="3"></span>
+				<span class="block">↓</span>
+				<span class="note" data="s0"></span>
+				<span class="block bytes used" data="s0-bin"></span>
+
+				<span class="block">&nbsp;</span>
+
+				<span class="block">
+					<b>s<sub>1</sub></b>
+				</span>
+				<span class="note" data="wx"
+						data-offset="2" data-repr="note"></span>
+				<span class="block bytes gray" data="wx"
+						data-offset="2" data-repr="bin"></span>
+				<span class="block">↓</span>
+				<span class="note" data="wx"
+						data-offset="2" data-repr="note" data-rotate="17"></span>
+				<span class="block bytes" data="wx"
+						data-offset="2" data-repr="bin" data-rotate="17"></span>
+				<span class="block">⊕</span>
+				<span class="note" data="wx"
+						data-offset="2" data-repr="note" data-rotate="19"></span>
+				<span class="block bytes" data="wx"
+						data-offset="2" data-repr="bin" data-rotate="19"></span>
+				<span class="block">⊕</span>
+				<span class="note" data="wx"
+						data-offset="2" data-repr="note" data-shift="10"></span>
+				<span class="block bytes" data="wx"
+						data-offset="2" data-repr="bin" data-shift="10"></span>
+				<span class="block">↓</span>
+				<span class="note" data="s1"></span>
+				<span class="block bytes used" data="s1-bin"></span>
+			</p>
+		</span>
+
+		<h2>Step 3.2. Hashing rounds.</h2>
 
 	</div>
 
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-
+<!-- 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+ -->
+	<script src="http://inside.com/cdn/libs/jquery/jquery.min.js"></script>
 	<script src="sha256.js"></script>
 </body>
 </html>

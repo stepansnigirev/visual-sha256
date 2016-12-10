@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     35428,       1122]
-NotebookOptionsPosition[     33556,       1052]
-NotebookOutlinePosition[     33915,       1068]
-CellTagsIndexPosition[     33872,       1065]
+NotebookDataLength[     35587,       1126]
+NotebookOptionsPosition[     33677,       1055]
+NotebookOutlinePosition[     34036,       1071]
+CellTagsIndexPosition[     33993,       1068]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -57,6 +57,9 @@ Cell[CellGroupData[{
 
 Cell["SHA-256 from scratch", "Title",
  CellChangeTimes->{{3.689960106736657*^9, 3.689960119032422*^9}}],
+
+Cell["This one works only for one chunk.", "Text",
+ CellChangeTimes->{{3.690391304649124*^9, 3.6903913124895277`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -1077,50 +1080,51 @@ Cell[1314, 44, 361, 7, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[1724, 57, 103, 1, 92, "Title"],
+Cell[1830, 60, 118, 1, 30, "Text"],
 Cell[CellGroupData[{
-Cell[1852, 62, 102, 1, 65, "Chapter"],
-Cell[1957, 65, 762, 17, 35, "Input"],
+Cell[1973, 65, 102, 1, 65, "Chapter"],
+Cell[2078, 68, 762, 17, 35, "Input"],
 Cell[CellGroupData[{
-Cell[2744, 86, 352, 9, 28, "Input"],
-Cell[3099, 97, 529, 10, 46, "Output"]
+Cell[2865, 89, 352, 9, 28, "Input"],
+Cell[3220, 100, 529, 10, 46, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3665, 112, 380, 10, 28, "Input"],
-Cell[4048, 124, 1538, 23, 182, "Output"]
+Cell[3786, 115, 380, 10, 28, "Input"],
+Cell[4169, 127, 1538, 23, 182, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5623, 152, 196, 5, 28, "Input"],
-Cell[5822, 159, 1425, 53, 46, "Output"]
+Cell[5744, 155, 196, 5, 28, "Input"],
+Cell[5943, 162, 1425, 53, 46, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7296, 218, 105, 1, 65, "Chapter"],
+Cell[7417, 221, 105, 1, 65, "Chapter"],
 Cell[CellGroupData[{
-Cell[7426, 223, 167, 3, 28, "Input"],
-Cell[7596, 228, 197, 3, 28, "Output"]
+Cell[7547, 226, 167, 3, 28, "Input"],
+Cell[7717, 231, 197, 3, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7830, 236, 2048, 51, 148, "Input"],
-Cell[9881, 289, 9603, 393, 80, "Output"],
-Cell[19487, 684, 705, 10, 28, "Output"],
-Cell[20195, 696, 492, 7, 28, "Output"]
+Cell[7951, 239, 2048, 51, 148, "Input"],
+Cell[10002, 292, 9603, 393, 80, "Output"],
+Cell[19608, 687, 705, 10, 28, "Output"],
+Cell[20316, 699, 492, 7, 28, "Output"]
 }, Open  ]],
-Cell[20702, 706, 630, 18, 35, "Input"],
-Cell[21335, 726, 655, 18, 35, "Input"]
+Cell[20823, 709, 630, 18, 35, "Input"],
+Cell[21456, 729, 655, 18, 35, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[22027, 749, 393, 5, 65, "Chapter"],
+Cell[22148, 752, 393, 5, 65, "Chapter"],
 Cell[CellGroupData[{
-Cell[22445, 758, 208, 4, 28, "Input"],
-Cell[22656, 764, 334, 7, 28, "Output"]
+Cell[22566, 761, 208, 4, 28, "Input"],
+Cell[22777, 767, 334, 7, 28, "Output"]
 }, Open  ]],
-Cell[23005, 774, 3929, 92, 264, "Input"],
-Cell[26937, 868, 540, 15, 28, "Input"],
-Cell[27480, 885, 4563, 119, 422, "Input"],
+Cell[23126, 777, 3929, 92, 264, "Input"],
+Cell[27058, 871, 540, 15, 28, "Input"],
+Cell[27601, 888, 4563, 119, 422, "Input"],
 Cell[CellGroupData[{
-Cell[32068, 1008, 959, 27, 69, "Input"],
-Cell[33030, 1037, 241, 4, 28, "Output"],
-Cell[33274, 1043, 242, 4, 28, "Output"]
+Cell[32189, 1011, 959, 27, 69, "Input"],
+Cell[33151, 1040, 241, 4, 28, "Output"],
+Cell[33395, 1046, 242, 4, 28, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
