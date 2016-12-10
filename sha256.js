@@ -1,11 +1,11 @@
 // number to 8 byte array conversion
-function longToByteArray(/*long*/long) {
+function toByteArray(/*long*/long, len = 8) {
     // we want to represent the input as a 8-bytes array
-    var byteArray = [0, 0, 0, 0, 0, 0, 0, 0];
+    var byteArray = [];
 
-    for ( var index = 0; index < byteArray.length; index ++ ) {
+    for ( var index = 0; index < len; index ++ ) {
         var byte = long & 0xff;
-        byteArray [ 7-index ] = byte;
+        byteArray.unshift(byte);
         long = (long - byte) / 256 ;
     }
 
@@ -40,7 +40,7 @@ String.prototype.pad = function(){
 
 // 64-bit length
 String.prototype.bitlen = function(){
-	return String.fromCharCode.apply(null, longToByteArray(this.length * 8));
+	return String.fromCharCode.apply(null, toByteArray(this.length * 8));
 }
 
 String.prototype.normalize = function(){
@@ -48,14 +48,31 @@ String.prototype.normalize = function(){
 }
 
 // we will store all data for hashing here
-var scope = {};
+var scope = {
+};
+
+// display options
+var display = {
+	init: { // which h and k to show on step 2
+		h: 0,
+		k: 0
+	}
+};
 
 // appending 100000...<64bit-integer-len> to the message
 function prepare_message(msg){
 	return msg;
 }
 
-function display(){
+primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61,
+67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137,
+139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211,
+223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283,
+293, 307, 311];
+
+function render(){
+
+	// Step 1. Preparing message
 	$("*[data='len']").html(scope.message.length * 8);
 	$("*[data='bytelen']").html(scope.message.length);
 
@@ -65,14 +82,40 @@ function display(){
 		"<span class='pad'>"+scope.message.pad().toByteString()+"</span>" + " " +
 		"<span class='len'>"+scope.message.bitlen().toByteString()+"</span>"
 	);
+
+	// Step 2. Initial values for h and k
+	display.init.h = (display.init.h + 8) % 8;
+	var h = display.init.h;
+	$("#h .num").html(h);
+	$("#h .prime").html(primes[h]);
+	var v = primes[h]**(1/2);
+	$("#h .dec").html(v.toString().substr(0,12));
+	v = v - Math.floor(v);
+	$("#h .frac").html(v.toString().substr(0,12));
+	$("#h .hex").html(v.toString(16).substr(0,12));
+	var finalh = parseInt("0x"+v.toString(16).substr(2,8));
+	var strh = String.fromCharCode.apply(null,toByteArray(finalh, 4)).toByteString();
+	$("#h .final").html(strh);
+
+	display.init.k = (display.init.k + 64) % 64;
+	var k = display.init.k;
+	$("#k .num").html(k);
+	$("#k .prime").html(primes[k]);
+	var v = primes[k]**(1/3);
+	$("#k .dec").html(v.toString().substr(0,12));
+	v = v - Math.floor(v);
+	$("#k .frac").html(v.toString().substr(0,12));
+	$("#k .hex").html(v.toString(16).substr(0,12));
+	var finalk = parseInt("0x"+v.toString(16).substr(2,8));
+	var strk = String.fromCharCode.apply(null,toByteArray(finalk, 4)).toByteString();
+	$("#k .final").html(strk);
 }
 
 function recalc(){
-	display();
+	render();
 }
 
 $(document).ready(function(){
-	console.log("Ready to hash");
 	scope.message = $('#message').val();
 
 	$("#message").change(function(){
@@ -85,5 +128,30 @@ $(document).ready(function(){
 		recalc();
 	});
 
+	$("#nexth").click(function(e){
+		e.preventDefault();
+		display.init.h--;
+		render();
+	});
+	$("#prevh").click(function(e){
+		e.preventDefault();
+		display.init.h++;
+		render();
+	});
+
+	$("#nextk").click(function(e){
+		e.preventDefault();
+		display.init.k--;
+		render();
+	});
+	$("#prevk").click(function(e){
+		e.preventDefault();
+		display.init.k++;
+		render();
+	});
+
 	recalc(message);
+
+	// $("#message").focus();
+	$("#message").select();
 });

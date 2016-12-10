@@ -3,13 +3,18 @@ body{
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: lighter;
+	padding-top: 20px;
 }
 h1,h2,h3,h4,h5,h6{
 	text-align: center;
 	font-weight: lighter;
 }
+h1{
+	padding-bottom: 20px;
+}
 .container{
-	max-width: 1000px;
+	max-width: 800px;
+	/* max-width: 1000px; */
 	margin: auto;
 }
 input#message{
@@ -18,6 +23,9 @@ input#message{
 	max-width: 800px;
 	display: block;
 	margin: auto;
+}
+p{
+	padding-bottom: 24px;
 }
 input{
 	font-size: inherit;
@@ -44,7 +52,6 @@ code{
 	line-height: 20px;
 }
 p{
-	max-width: 800px;
 	text-align: justify;
 	margin: auto;
 }
@@ -68,7 +75,7 @@ p{
 	font-size: 24px;
 	padding: 20px;
 }
-.important .bytes{
+.important .x16{
 	display: block;
 	max-width: 720px;
 }
@@ -81,4 +88,42 @@ p{
 }
 .len{
 	color: #4A90E2;
+}
+a{
+	color: #4A90E2;
+	text-decoration: none;
+	cursor: pointer;
+}
+a:hover{
+	color: #4A90E2;
+	text-decoration: underline;
+}
+.noselect{
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+}
+.column{
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+}
+
+.arrow-right {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid #aaa;
+}
+
+.arrow-left {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right:10px solid #aaa;
 }
