@@ -262,7 +262,7 @@ function render(){
 	var chunkmsg = scope.chunks[chunk].message;
 	var chunkstr = chunkmsg.toByteString();
 	$("#w .num").html(w);
-	$("#w .chunk").html(chunk);
+	$(".chunk").html(chunk);
 	if(w<16){
 		$("#w-source").html("Directly from message");
 		$("*[data='w-msg']").html(
@@ -333,10 +333,19 @@ function render(){
 
 }
 
+function log(){
+	console.log("fired!");
+}
+
 function recalc(){
 	scope = sha256(scope.message);
 	render();
 }
+
+svgelements = ["#Ain","#Bin","#Cin","#Din","#Ein","#Fin","#Gin","#Hin",
+"#Aout","#Bout","#Cout","#Dout","#Eout","#Fout","#Gout","#Hout",
+"#Chgate","#Majgate","#S1gate","#S0gate","#kin","#win","#tsumgate","#t1gate",
+"#S1plus","#S0plus","#Majplus","#Dplus","#hchplus","#wkplus"]
 
 $(document).ready(function(){
 	scope.message = $('#message').val();
@@ -374,12 +383,12 @@ $(document).ready(function(){
 		render();
 	});
 
-	$("#nextchunk").click(function(e){
+	$(".nextchunk").click(function(e){
 		// e.preventDefault();
 		display.word.chunk--;
 		render();
 	});
-	$("#prevchunk").click(function(e){
+	$(".prevchunk").click(function(e){
 		// e.preventDefault();
 		display.word.chunk++;
 		render();
@@ -404,6 +413,18 @@ $(document).ready(function(){
 			$(this).html("Show how to calculate s<sub>0</sub> and s<sub>1</sub>");
 		}
 	});
+
+    $('#svgholder').load('sha256.svg', null, function(){
+    	$("#Ain").addClass("focus");
+    	for (var i = 0; i < svgelements.length; i++) {
+    		$(svgelements[i]).click(function(){
+    			for (var i = 0; i < svgelements.length; i++) {
+    				$(svgelements[i]).removeClass("focus");
+    			}
+    			$(this).addClass("focus");
+    		});
+    	}
+    });
 
 	recalc(message);
 });

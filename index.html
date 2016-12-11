@@ -134,17 +134,19 @@
 		</p>
 
 		<p class="center important">
-	        w<sub>i</sub> = w<sub>i-16</sub> + s<sub>0</sub> + w<sub>i-7</sub> + s<sub>1</sub>
+	        w<sub>i</sub> = w<sub>i-16</sub> + s<sub>0</sub>(w<sub>i-15</sub>) + w<sub>i-7</sub> + s<sub>1</sub>(w<sub>i-2</sub>)
 	    </p>
-	    <p>Here s<sub>0</sub> and s<sub>1</sub> are calculated as follows:</p>
-		<p class="center">
-	        s<sub>0</sub> = (w<sub>i-15</sub> >>> 7) ⊕ (w<sub>i-15</sub> >>> 18) ⊕ (w<sub>i-15</sub> >> 3)
+	    <p>
+	    	Here s<sub>0</sub>(w) and s<sub>1</sub>(w) are calculated as follows:
 	    </p>
 		<p class="center">
-	        s<sub>1</sub> = (w<sub>i-2</sub> >>> 17) ⊕ (w<sub>i-2</sub> >>> 19) ⊕ (w<sub>i-2</sub> >> 10)
+	        s<sub>0</sub>(w) = (w ⋙ 7) ⊕ (w ⋙ 18) ⊕ (w ≫ 3)
+	    </p>
+		<p class="center">
+	        s<sub>1</sub>(w) = (w ⋙ 17) ⊕ (w ⋙ 19) ⊕ (w ≫ 10)
         </p>
 	    <p>
-	    	<code>>>></code> means right rotation (circular shift of bits when bits are removed from the end of the word and prepended to the beginning), <code>>></code> means right shift (last bits are removed, zeros are prepended). For example <code>100111<b>01</b> >>> 2 = <b>01</b>100111</code> and <code>10011101 >> 2 = <b>00</b>100111</code>. Symbol <code>⊕</code> means XOR operation.
+	    	<code>⋙</code> means right rotation (circular shift of bits when bits are removed from the end of the word and prepended to the beginning), <code>≫</code> means right shift (last bits are removed, zeros are prepended). For example <code>100111<b>01</b> ⋙ 2 = <b>01</b>100111</code> and <code>10011101 ≫ 2 = <b>00</b>100111</code>. Symbol <code>⊕</code> means XOR operation.
 	    </p>
 
 		<p>
@@ -153,9 +155,9 @@
 
 		<p class="center important" id="w">
 			<span class="block">
-				<a id="nextchunk" class="noselect multichunks">←</a>
-				<b>chunk<sub><span class="chunk">0</span></sub></b>
-				<a id="prevchunk" class="noselect multichunks">→</a>
+				<a class="nextchunk noselect multichunks">←</a>
+				<b>Chunk <span class="chunk">0</span></b>
+				<a class="prevchunk noselect multichunks">→</a>
 			</span>
 			<span class="block">
 				<a id="nextw" class="noselect">←</a>
@@ -259,13 +261,7 @@
 			Now, when we finally made all preparations, calculated all the constants, words and initial hashes, we can start.
 		</p>
 		<p>
-			During calculations we will be messing with 8 variables - <b>A</b>, <b>B</b>, <b>C</b>, <b>D</b>, <b>E</b>, <b>F</b>, <b>G</b>, <b>H</b>. We initialize them with our hash variables h<sub>0</sub>-h<sub>7</sub>. In every round we will be calculating another 6 variables - <b>S<sub>1</sub></b>, <b>ch</b>, <b>t<sub>1</sub></b>, <b>S<sub>0</sub></b>, <b>maj</b> and <b>t<sub>2</sub></b>.
-		</p>
-		<p>
-			Calculations in equations look terrible, so I would better put a picture. Calculations are still there though.
-		</p>
-		<p class="center">
-			<img src="sha256.svg" style="max-width: 600px" />
+			During calculations we will be messing with 8 variables - <b>A</b>, <b>B</b>, <b>C</b>, <b>D</b>, <b>E</b>, <b>F</b>, <b>G</b>, <b>H</b>. We initialize them with our hash variables <b>h<sub>0</sub></b>-<b>h<sub>7</sub></b>. In every round we will be calculating another 6 variables - <b>S<sub>1</sub></b>, <b>ch</b>, <b>t<sub>1</sub></b>, <b>S<sub>0</sub></b>, <b>maj</b> and <b>t<sub>2</sub></b>.
 		</p>
 		<p>
 			In round <b>i</b> we calculate them as follows:
@@ -275,7 +271,7 @@
 			<div>
 			    <p class="line"></p>
 				<p class="line">
-			        <b>S<sub>1</sub></b> = (E<sub>i-1</sub> >>> 6) ⊕ (E<sub>i-1</sub> >>> 11) ⊕ (E<sub>i-1</sub> >>> 25)
+			        <b>S<sub>1</sub></b> = (E<sub>i-1</sub> ⋙ 6) ⊕ (E<sub>i-1</sub> ⋙ 11) ⊕ (E<sub>i-1</sub> ⋙ 25)
 			    </p>
 			    <p class="line">
 			        <b>ch</b> = (E<sub>i-1</sub> &amp; F<sub>i-1</sub>) ⊕ ((¬E<sub>i-1</sub>) &amp; G<sub>i-1</sub>)
@@ -284,7 +280,7 @@
 			        <b>t<sub>1</sub></b> = H<sub>i-1</sub> + S<sub>1</sub> + ch + k<sub>i</sub> + w<sub>i</sub>
 			    </p>
 			    <p class="line">
-			        <b>S<sub>0</sub></b> = (A<sub>i-1</sub> >>> 2) ⊕ (A<sub>i-1</sub> >>> 13) ⊕ (A<sub>i-1</sub> >>> 22)
+			        <b>S<sub>0</sub></b> = (A<sub>i-1</sub> ⋙ 2) ⊕ (A<sub>i-1</sub> ⋙ 13) ⊕ (A<sub>i-1</sub> ⋙ 22)
 			    </p>
 			    <p class="line">
 			        <b>maj</b> = (A<sub>i-1</sub> &amp; B<sub>i-1</sub>) ⊕ (A<sub>i-1</sub> &amp; C<sub>i-1</sub>) ⊕ (B<sub>i-1</sub> &amp; C<sub>i-1</sub>)
@@ -324,8 +320,34 @@
 		</div>
 
 		<p>
-			After 64 rounds we add obtained values of <b>A</b>, <b>B</b>, <b>C</b>, <b>D</b>, <b>E</b>, <b>F</b>, <b>G</b> and <b>H</b> to our hash variables h<sub>0</sub>-h<sub>7</sub> and move to the next chunk. We repeat this procedure with all chunks and then concatenate all hash varuables togeather to recieve final result.
+			All variables should stay 32-bit long, so all summations are made modulo 2<sup>32</sup>.
 		</p>
+
+		<p>
+			After 64 rounds we add obtained values of <b>A</b>, <b>B</b>, <b>C</b>, <b>D</b>, <b>E</b>, <b>F</b>, <b>G</b> and <b>H</b> to our hash variables <b>h<sub>0</sub></b>-<b>h<sub>7</sub></b> and move to the next chunk. We repeat this procedure with all chunks and then concatenate all hash varuables togeather to recieve final result.
+		</p>
+
+		<p>
+			Calculations look terrible, so I would better put an interactive picture. Click on any of the squares to figure out the result.
+		</p>
+		<p class="important center" id="round">
+			<span class="block">
+				<a class="nextchunk noselect multichunks">←</a>
+				<b>Chunk <span class="chunk">0</span></b>
+				<a class="prevchunk noselect multichunks">→</a>
+			</span>
+			<span class="block">
+				<a id="nextr" class="noselect">←</a>
+				<b>Round <span class="num">0</span></b>
+				<a id="prevr" class="noselect">→</a>
+			</span>
+		</p>
+ 		<p class="note center">
+ 			Click on any of the squares to figure out the result.
+ 		</p>
+		<p class="center" id="svgholder">
+ 			<img src="sha256.svg" style="max-width: 800px" />
+ 		</p>
 
 	</div>
 

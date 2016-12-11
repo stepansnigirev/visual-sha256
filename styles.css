@@ -136,3 +136,42 @@ a:hover{
 	height: 25px;
 	padding-left: 50px;
 }
+svg{
+	max-width: 800px;
+	max-height: 420px;
+}
+#Ain,#Bin,#Cin,#Din,#Ein,#Fin,#Gin,#Hin,
+#Aout,#Bout,#Cout,#Dout,#Eout,#Fout,#Gout,#Hout,
+#Chgate,#Majgate,#S1gate,#S0gate,#kin,#win,#tsumgate,#t1gate,
+#S1plus,#S0plus,#Majplus,#Dplus,#hchplus,#wkplus{
+	opacity: 0.6;
+	transition: opacity 0.2s linear;
+}
+#Ain,#Bin,#Cin,#Din,#Ein,#Fin,#Gin,#Hin,
+#Aout,#Bout,#Cout,#Dout,#Eout,#Fout,#Gout,#Hout,
+#Chgate,#Majgate,#S1gate,#S0gate,#kin,#win,#tsumgate,#t1gate,
+#S1plus,#S0plus,#Majplus,#Dplus,#hchplus,#wkplus{
+	cursor: pointer;
+}
+#Ain:hover,#Bin:hover,#Cin:hover,#Din:hover,#Ein:hover,#Fin:hover,#Gin:hover,#Hin:hover,
+#Aout:hover,#Bout:hover,#Cout:hover,#Dout:hover,#Eout:hover,#Fout:hover,#Gout:hover,#Hout:hover,
+#Chgate:hover,#Majgate:hover,#S1gate:hover,#S0gate:hover,#kin:hover,#win:hover,#tsumgate:hover,#t1gate:hover,
+#S1plus:hover,#S0plus:hover,#Majplus:hover,#Dplus:hover,#hchplus:hover,#wkplus:hover{
+	opacity: 1;
+}
+#Ain>rect,#Bin>rect,#Cin>rect,#Din>rect,#Ein>rect,#Fin>rect,#Gin>rect,#Hin>rect,
+#Aout>rect,#Bout>rect,#Cout>rect,#Dout>rect,#Eout>rect,#Fout>rect,#Gout>rect,#Hout>rect,
+#Chgate>rect,#Majgate>rect,#S1gate>rect,#S0gate>rect,#kin>rect,#win>rect,#tsumgate>rect,#t1gate>rect,
+#S1plus>rect,#S0plus>rect,#Majplus>rect,#Dplus>rect,#hchplus>rect,#wkplus>rect{
+	stroke-width: 0;
+	transition: stroke-width 0.2s linear;
+}
+.focus>rect,.focus>rect{
+	/* stroke-width: 4px !important; */
+}
+.focus{
+	opacity: 1 !important;
+}
+.shaded{
+	opacity: 0.4 !important;
+}

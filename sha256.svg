@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="902px" height="525px" viewBox="0 0 902 525" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="970px" height="488px" viewBox="0 0 970 488" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.5.1 (25234) - http://www.bohemiancoding.com/sketch -->
     <title>sha256</title>
     <desc>Created with Sketch.</desc>
@@ -16,70 +16,90 @@
             <stop stop-color="#4A90E2" offset="0%"></stop>
             <stop stop-color="#2F588A" offset="100%"></stop>
         </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#0B2E56" offset="0%"></stop>
+            <stop stop-color="#2F588A" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#FFC800" offset="0%"></stop>
+            <stop stop-color="#F76B1C" offset="100%"></stop>
+        </linearGradient>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="arrow-Copy-6" sketch:type="MSLayerGroup" transform="translate(558.000000, 118.416375)" stroke="#979797" stroke-width="3">
-            <path d="M2.0610005,0.862552938 L2.0610005,346.818121" id="Path-1" sketch:type="MSShapeGroup"></path>
-            <path id="Path-1-decoration-1" d="M2.0610005,346.818121 L5.0610005,336.018121 L-0.938999495,336.018121 L2.0610005,346.818121 Z"></path>
+        <g id="Arrows" sketch:type="MSLayerGroup" transform="translate(227.000000, 39.000000)" stroke="#979797" stroke-width="3">
+            <g id="arrow-Copy-6" transform="translate(361.000000, 23.416375)">
+                <path d="M2.0610005,0.862552938 L2.0610005,346.818121" id="Path-1" sketch:type="MSShapeGroup"></path>
+                <path id="Path-1-decoration-1" d="M2.0610005,346.818121 L5.0610005,336.018121 L-0.938999495,336.018121 L2.0610005,346.818121 Z"></path>
+            </g>
+            <g id="arrow-Copy-5" transform="translate(301.000000, 23.416375)">
+                <path d="M2.0610005,0.862552938 L2.0610005,346.818121" id="Path-1" sketch:type="MSShapeGroup"></path>
+                <path id="Path-1-decoration-1" d="M2.0610005,346.818121 L5.0610005,336.018121 L-0.938999495,336.018121 L2.0610005,346.818121 Z"></path>
+            </g>
+            <g id="arrow-Copy-4" transform="translate(241.000000, 23.416375)">
+                <path d="M2.0610005,0.862552938 L2.0610005,346.818121" id="Path-1" sketch:type="MSShapeGroup"></path>
+                <path id="Path-1-decoration-1" d="M2.0610005,346.818121 L5.0610005,336.018121 L-0.938999495,336.018121 L2.0610005,346.818121 Z"></path>
+            </g>
+            <path d="M182.0305,26.322604 L182.0305,179.507052" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M182.0305,179.507052 L185.0305,168.707052 L179.0305,168.707052 L182.0305,179.507052 Z"></path>
+            <path d="M182.0305,216.499285 L182.0305,370.674051" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M182.0305,370.674051 L185.0305,359.874051 L179.0305,359.874051 L182.0305,370.674051 Z"></path>
+            <g id="arrow-Copy-2" transform="translate(121.000000, 23.416375)">
+                <path d="M2.0610005,0.862552938 L2.0610005,346.818121" id="Path-1" sketch:type="MSShapeGroup"></path>
+                <path id="Path-1-decoration-1" d="M2.0610005,346.818121 L5.0610005,336.018121 L-0.938999495,336.018121 L2.0610005,346.818121 Z"></path>
+            </g>
+            <g id="arrow-Copy" transform="translate(61.000000, 23.416375)">
+                <path d="M2.0610005,0.862552938 L2.0610005,346.818121" id="Path-1" sketch:type="MSShapeGroup"></path>
+                <path id="Path-1-decoration-1" d="M2.0610005,346.818121 L5.0610005,336.018121 L-0.938999495,336.018121 L2.0610005,346.818121 Z"></path>
+            </g>
+            <g id="arrow" transform="translate(0.000000, 23.416375)">
+                <path d="M2.0610005,0.862552938 L2.0610005,346.818121" id="Path-1" sketch:type="MSShapeGroup"></path>
+                <path id="Path-1-decoration-1" d="M2.0610005,346.818121 L5.0610005,336.018121 L-0.938999495,336.018121 L2.0610005,346.818121 Z"></path>
+            </g>
+            <path d="M243.257738,63.4163748 L416.512531,63.4163748" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M416.512531,63.4163748 L405.712531,60.4163748 L405.712531,66.4163748 L416.512531,63.4163748 Z"></path>
+            <path d="M243.257738,151.416375 L416.512531,151.416375" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M416.512531,151.416375 L405.712531,148.416375 L405.712531,154.416375 L416.512531,151.416375 Z"></path>
+            <path d="M548.326634,201.416375 L201.296803,201.416375" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M201.296803,201.416375 L212.096803,204.416375 L212.096803,198.416375 L201.296803,201.416375 Z"></path>
+            <path d="M303.432161,76.4163748 L416.512531,76.4163748" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M416.512531,76.4163748 L405.712531,73.4163748 L405.712531,79.4163748 L416.512531,76.4163748 Z"></path>
+            <path d="M363.499934,90.4163748 L416.512531,90.4163748" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M416.512531,90.4163748 L405.712531,87.4163748 L405.712531,93.4163748 L416.512531,90.4163748 Z"></path>
+            <path d="M473.499934,74.4163748 L526.512531,74.4163748" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M526.512531,74.4163748 L515.712531,71.4163748 L515.712531,77.4163748 L526.512531,74.4163748 Z"></path>
+            <path d="M684.499934,74.4163748 L649.512531,74.4163748" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M649.512531,74.4163748 L660.312531,77.4163748 L660.312531,71.4163748 L649.512531,74.4163748 Z"></path>
+            <path d="M612.509766,74.4163748 L569.512531,74.4163748" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M569.512531,74.4163748 L580.312531,77.4163748 L580.312531,71.4163748 L569.512531,74.4163748 Z"></path>
+            <path d="M446.499934,0.416374831 L548,0.416374831 L548,53.5310809" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M548,53.5310809 L551,42.7310809 L545,42.7310809 L548,53.5310809 Z"></path>
+            <path d="M628,20.4962159 L628,53.5310809" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M628,53.5310809 L631,42.7310809 L625,42.7310809 L628,53.5310809 Z"></path>
+            <path d="M548,87.4969536 L548,128.531081" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M548,128.531081 L551,117.731081 L545,117.731081 L548,128.531081 Z"></path>
+            <path d="M548,263.496954 L548,304.531081" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M548,304.531081 L551,293.731081 L545,293.731081 L548,304.531081 Z"></path>
+            <path d="M548,340.497687 L548,405.531081" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path d="M548,164.497985 L548,226.531081" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M548,226.531081 L551,215.731081 L545,215.731081 L548,226.531081 Z"></path>
+            <path d="M473.499934,250.416375 L526.512531,250.416375" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M526.512531,250.416375 L515.712531,247.416375 L515.712531,253.416375 L526.512531,250.416375 Z"></path>
+            <path d="M473.499934,326.416375 L526.512531,326.416375" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M526.512531,326.416375 L515.712531,323.416375 L515.712531,329.416375 L526.512531,326.416375 Z"></path>
+            <path d="M548.890926,404.416375 L454.512531,404.416375" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M454.512531,404.416375 L465.312531,407.416375 L465.312531,401.416375 L454.512531,404.416375 Z"></path>
+            <path d="M473.499934,151.416375 L526.512531,151.416375" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M526.512531,151.416375 L515.712531,148.416375 L515.712531,154.416375 L526.512531,151.416375 Z"></path>
+            <path d="M3.42413882,236.416375 L416.512531,236.416375" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M416.512531,236.416375 L405.712531,233.416375 L405.712531,239.416375 L416.512531,236.416375 Z"></path>
+            <path d="M3.42413882,327.416375 L416.512531,327.416375" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M416.512531,327.416375 L405.712531,324.416375 L405.712531,330.416375 L416.512531,327.416375 Z"></path>
+            <path d="M63.4879535,249.416375 L416.512531,249.416375" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M416.512531,249.416375 L405.712531,246.416375 L405.712531,252.416375 L416.512531,249.416375 Z"></path>
+            <path d="M124.497989,263.416375 L416.512531,263.416375" id="Path-1" sketch:type="MSShapeGroup"></path>
+            <path id="Path-1-decoration-1" d="M416.512531,263.416375 L405.712531,260.416375 L405.712531,266.416375 L416.512531,263.416375 Z"></path>
         </g>
-        <g id="arrow-Copy-5" sketch:type="MSLayerGroup" transform="translate(498.000000, 118.416375)" stroke="#979797" stroke-width="3">
-            <path d="M2.0610005,0.862552938 L2.0610005,346.818121" id="Path-1" sketch:type="MSShapeGroup"></path>
-            <path id="Path-1-decoration-1" d="M2.0610005,346.818121 L5.0610005,336.018121 L-0.938999495,336.018121 L2.0610005,346.818121 Z"></path>
-        </g>
-        <g id="arrow-Copy-4" sketch:type="MSLayerGroup" transform="translate(438.000000, 118.416375)" stroke="#979797" stroke-width="3">
-            <path d="M2.0610005,0.862552938 L2.0610005,346.818121" id="Path-1" sketch:type="MSShapeGroup"></path>
-            <path id="Path-1-decoration-1" d="M2.0610005,346.818121 L5.0610005,336.018121 L-0.938999495,336.018121 L2.0610005,346.818121 Z"></path>
-        </g>
-        <path d="M379.0305,121.322604 L379.0305,274.507052" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M379.0305,274.507052 L382.0305,263.707052 L376.0305,263.707052 L379.0305,274.507052 Z" stroke="#979797" stroke-width="3"></path>
-        <path d="M379.0305,305.499121 L379.0305,465.674051" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M379.0305,465.674051 L382.0305,454.874051 L376.0305,454.874051 L379.0305,465.674051 Z" stroke="#979797" stroke-width="3"></path>
-        <g id="arrow-Copy-2" sketch:type="MSLayerGroup" transform="translate(318.000000, 118.416375)" stroke="#979797" stroke-width="3">
-            <path d="M2.0610005,0.862552938 L2.0610005,346.818121" id="Path-1" sketch:type="MSShapeGroup"></path>
-            <path id="Path-1-decoration-1" d="M2.0610005,346.818121 L5.0610005,336.018121 L-0.938999495,336.018121 L2.0610005,346.818121 Z"></path>
-        </g>
-        <g id="arrow-Copy" sketch:type="MSLayerGroup" transform="translate(258.000000, 118.416375)" stroke="#979797" stroke-width="3">
-            <path d="M2.0610005,0.862552938 L2.0610005,346.818121" id="Path-1" sketch:type="MSShapeGroup"></path>
-            <path id="Path-1-decoration-1" d="M2.0610005,346.818121 L5.0610005,336.018121 L-0.938999495,336.018121 L2.0610005,346.818121 Z"></path>
-        </g>
-        <g id="arrow" sketch:type="MSLayerGroup" transform="translate(197.000000, 118.416375)" stroke="#979797" stroke-width="3">
-            <path d="M2.0610005,0.862552938 L2.0610005,346.818121" id="Path-1" sketch:type="MSShapeGroup"></path>
-            <path id="Path-1-decoration-1" d="M2.0610005,346.818121 L5.0610005,336.018121 L-0.938999495,336.018121 L2.0610005,346.818121 Z"></path>
-        </g>
-        <path d="M440.257738,158.416375 L613.512531,158.416375" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M613.512531,158.416375 L602.712531,155.416375 L602.712531,161.416375 L613.512531,158.416375 Z" stroke="#979797" stroke-width="3"></path>
-        <path d="M440.257738,246.416375 L613.512531,246.416375" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M613.512531,246.416375 L602.712531,243.416375 L602.712531,249.416375 L613.512531,246.416375 Z" stroke="#979797" stroke-width="3"></path>
-        <path d="M745.326634,296.416375 L398.296803,296.416375" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M398.296803,296.416375 L409.096803,299.416375 L409.096803,293.416375 L398.296803,296.416375 Z" stroke="#979797" stroke-width="3"></path>
-        <path d="M500.432161,171.416375 L613.512531,171.416375" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M613.512531,171.416375 L602.712531,168.416375 L602.712531,174.416375 L613.512531,171.416375 Z" stroke="#979797" stroke-width="3"></path>
-        <path d="M560.499934,185.416375 L613.512531,185.416375" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M613.512531,185.416375 L602.712531,182.416375 L602.712531,188.416375 L613.512531,185.416375 Z" stroke="#979797" stroke-width="3"></path>
-        <path d="M670.499934,169.416375 L723.512531,169.416375" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M723.512531,169.416375 L712.712531,166.416375 L712.712531,172.416375 L723.512531,169.416375 Z" stroke="#979797" stroke-width="3"></path>
-        <path d="M881.499934,169.416375 L846.512531,169.416375" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M846.512531,169.416375 L857.312531,172.416375 L857.312531,166.416375 L846.512531,169.416375 Z" stroke="#979797" stroke-width="3"></path>
-        <path d="M821.499934,169.416375 L766.512531,169.416375" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M766.512531,169.416375 L777.312531,172.416375 L777.312531,166.416375 L766.512531,169.416375 Z" stroke="#979797" stroke-width="3"></path>
-        <path d="M643.499934,95.4163748 L745,95.4163748 L745,148.531081" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M745,148.531081 L748,137.731081 L742,137.731081 L745,148.531081 Z" stroke="#979797" stroke-width="3"></path>
-        <path d="M825,115.496216 L825,148.531081" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M825,148.531081 L828,137.731081 L822,137.731081 L825,148.531081 Z" stroke="#979797" stroke-width="3"></path>
-        <path d="M745,177.497285 L745,223.531081" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M745,223.531081 L748,212.731081 L742,212.731081 L745,223.531081 Z" stroke="#979797" stroke-width="3"></path>
-        <path d="M745,345.497687 L745,399.531081" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M745,399.531081 L748,388.731081 L742,388.731081 L745,399.531081 Z" stroke="#979797" stroke-width="3"></path>
-        <path d="M745,428.497687 L745,500.531081" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path d="M745,253.454081 L745,321.531081" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M745,321.531081 L748,310.731081 L742,310.731081 L745,321.531081 Z" stroke="#979797" stroke-width="3"></path>
-        <path d="M670.499934,345.416375 L723.512531,345.416375" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M723.512531,345.416375 L712.712531,342.416375 L712.712531,348.416375 L723.512531,345.416375 Z" stroke="#979797" stroke-width="3"></path>
-        <path d="M670.499934,421.416375 L723.512531,421.416375" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M723.512531,421.416375 L712.712531,418.416375 L712.712531,424.416375 L723.512531,421.416375 Z" stroke="#979797" stroke-width="3"></path>
-        <path d="M745.890926,499.416375 L651.512531,499.416375" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M651.512531,499.416375 L662.312531,502.416375 L662.312531,496.416375 L651.512531,499.416375 Z" stroke="#979797" stroke-width="3"></path>
-        <g id="plus" sketch:type="MSLayerGroup" transform="translate(726.000000, 394.000000)">
+        <g id="S0plus" sketch:type="MSLayerGroup" transform="translate(756.000000, 338.000000)">
             <g id="gate" transform="translate(4.000000, 10.000000)" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup">
                 <rect id="Rectangle-13" x="0" y="0" width="31" height="31" rx="5"></rect>
             </g>
@@ -87,7 +107,7 @@
                 <tspan x="8.69628906" y="35">+</tspan>
             </text>
         </g>
-        <g id="plus" sketch:type="MSLayerGroup" transform="translate(726.000000, 318.000000)">
+        <g id="Majplus" sketch:type="MSLayerGroup" transform="translate(756.000000, 262.000000)">
             <g id="gate" transform="translate(4.000000, 10.000000)" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup">
                 <rect id="Rectangle-13" x="0" y="0" width="31" height="31" rx="5"></rect>
             </g>
@@ -95,9 +115,7 @@
                 <tspan x="8.69628906" y="35">+</tspan>
             </text>
         </g>
-        <path d="M670.499934,246.416375 L723.512531,246.416375" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M723.512531,246.416375 L712.712531,243.416375 L712.712531,249.416375 L723.512531,246.416375 Z" stroke="#979797" stroke-width="3"></path>
-        <g id="plus" sketch:type="MSLayerGroup" transform="translate(726.000000, 219.000000)">
+        <g id="S1plus" sketch:type="MSLayerGroup" transform="translate(756.000000, 163.000000)">
             <g id="gate" transform="translate(4.000000, 10.000000)" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup">
                 <rect id="Rectangle-13" x="0" y="0" width="31" height="31" rx="5"></rect>
             </g>
@@ -105,7 +123,7 @@
                 <tspan x="8.69628906" y="35">+</tspan>
             </text>
         </g>
-        <g id="plus" sketch:type="MSLayerGroup" transform="translate(360.000000, 271.000000)">
+        <g id="Dplus" sketch:type="MSLayerGroup" transform="translate(390.000000, 215.000000)">
             <g id="gate" transform="translate(4.000000, 10.000000)" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup">
                 <rect id="Rectangle-13" x="0" y="0" width="31" height="31" rx="5"></rect>
             </g>
@@ -113,79 +131,62 @@
                 <tspan x="8.69628906" y="35">+</tspan>
             </text>
         </g>
-        <g id="gate" sketch:type="MSLayerGroup" transform="translate(619.000000, 321.000000)">
+        <g id="Majgate" sketch:type="MSLayerGroup" transform="translate(649.000000, 265.000000)">
             <rect id="Rectangle-13" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
             <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="25" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
                 <tspan x="5.85839844" y="35">Maj</tspan>
             </text>
         </g>
-        <g id="gate" sketch:type="MSLayerGroup" transform="translate(619.000000, 145.000000)">
+        <g id="Chgate" sketch:type="MSLayerGroup" transform="translate(649.000000, 89.000000)">
             <rect id="Rectangle-13" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
             <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="25" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
                 <tspan x="10.0209961" y="35">Ch</tspan>
             </text>
         </g>
-        <g id="gate" sketch:type="MSLayerGroup" transform="translate(619.000000, 220.000000)">
-            <g id="Rectangle-13" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup">
-                <rect x="0" y="0" width="52" height="52" rx="5"></rect>
-            </g>
-            <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="25" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
-                <tspan x="13.6572266" y="33">S</tspan>
-                <tspan x="30.3320312" y="33" font-size="18">1</tspan>
-            </text>
-        </g>
-        <path d="M200.424139,331.416375 L613.512531,331.416375" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M613.512531,331.416375 L602.712531,328.416375 L602.712531,334.416375 L613.512531,331.416375 Z" stroke="#979797" stroke-width="3"></path>
-        <path d="M200.424139,422.416375 L613.512531,422.416375" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M613.512531,422.416375 L602.712531,419.416375 L602.712531,425.416375 L613.512531,422.416375 Z" stroke="#979797" stroke-width="3"></path>
-        <path d="M260.487954,344.416375 L613.512531,344.416375" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M613.512531,344.416375 L602.712531,341.416375 L602.712531,347.416375 L613.512531,344.416375 Z" stroke="#979797" stroke-width="3"></path>
-        <path d="M321.497989,358.416375 L613.512531,358.416375" id="Path-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
-        <path id="Path-1-decoration-1" d="M613.512531,358.416375 L602.712531,355.416375 L602.712531,361.416375 L613.512531,358.416375 Z" stroke="#979797" stroke-width="3"></path>
-        <g id="Bottom" sketch:type="MSLayerGroup" transform="translate(0.000000, 473.000000)">
-            <g id="Letter2" transform="translate(592.000000, 0.000000)">
+        <g id="Bottom" sketch:type="MSLayerGroup" transform="translate(30.000000, 417.000000)">
+            <g id="Aout" transform="translate(592.000000, 0.000000)">
                 <rect id="Rectangle-13" fill="url(#linearGradient-2)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
                 <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
                     <tspan x="13.4941406" y="39">A</tspan>
                 </text>
             </g>
-            <g id="Letter" transform="translate(292.000000, 0.000000)">
+            <g id="Dout" transform="translate(292.000000, 0.000000)">
                 <rect id="Rectangle-13" fill="url(#linearGradient-2)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
                 <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
                     <tspan x="12.5009766" y="39">D</tspan>
                 </text>
             </g>
-            <g id="Letter" transform="translate(352.000000, 0.000000)">
+            <g id="Eout" transform="translate(352.000000, 0.000000)">
                 <rect id="Rectangle-13" fill="url(#linearGradient-2)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
                 <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
                     <tspan x="13.4941406" y="39">E</tspan>
                 </text>
             </g>
-            <g id="Letter" transform="translate(472.000000, 0.000000)">
+            <g id="Gout" transform="translate(472.000000, 0.000000)">
                 <rect id="Rectangle-13" fill="url(#linearGradient-2)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
                 <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
                     <tspan x="11.4990234" y="39">G</tspan>
                 </text>
             </g>
-            <g id="Letter" transform="translate(532.000000, 0.000000)">
+            <g id="Hout" transform="translate(532.000000, 0.000000)">
                 <rect id="Rectangle-13" fill="url(#linearGradient-2)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
                 <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
                     <tspan x="12.5009766" y="39">H</tspan>
                 </text>
             </g>
-            <g id="Letter" transform="translate(412.000000, 0.000000)">
+            <g id="Fout" transform="translate(412.000000, 0.000000)">
                 <rect id="Rectangle-13" fill="url(#linearGradient-2)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
                 <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
                     <tspan x="14.5048828" y="39">F</tspan>
                 </text>
             </g>
-            <g id="Letter" transform="translate(172.000000, 0.000000)">
+            <g id="Bout" transform="translate(172.000000, 0.000000)">
                 <rect id="Rectangle-13" fill="url(#linearGradient-2)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
                 <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
                     <tspan x="13.4941406" y="39">B</tspan>
                 </text>
             </g>
-            <g id="Letter" transform="translate(232.000000, 0.000000)">
+            <g id="Cout" transform="translate(232.000000, 0.000000)">
                 <rect id="Rectangle-13" fill="url(#linearGradient-2)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
                 <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
                     <tspan x="12.5009766" y="39">C</tspan>
@@ -196,70 +197,61 @@
                 <tspan x="127.999023" y="33" font-weight="bold">i</tspan>
             </text>
         </g>
-        <g id="Top" sketch:type="MSLayerGroup" transform="translate(13.000000, 70.000000)">
-            <text id="From-round-i-1" sketch:type="MSTextLayer" font-family="Helvetica" font-size="18" font-weight="normal" sketch:alignment="right" fill="#4A4A4A">
-                <tspan x="0.9609375" y="33">From round </tspan>
-                <tspan x="98.9941406" y="33" font-weight="bold">i-1</tspan>
+        <g id="Top" sketch:type="MSLayerGroup" transform="translate(14.000000, 13.000000)">
+            <text id="Result-of-round-i-1" sketch:type="MSTextLayer" font-family="Helvetica" font-size="18" font-weight="normal" sketch:alignment="right" fill="#4A4A4A">
+                <tspan x="0.921875" y="33">Result of round </tspan>
+                <tspan x="127.994141" y="33" font-weight="bold">i-1</tspan>
             </text>
-            <g id="Letter" transform="translate(159.000000, 0.000000)">
-                <rect id="Rectangle-13" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
+            <g id="Ain" transform="translate(188.000000, 0.000000)">
+                <rect id="Rectangle-13" stroke="url(#linearGradient-4)" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
                 <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
                     <tspan x="13.4941406" y="39">A</tspan>
                 </text>
             </g>
-            <g id="Letter" transform="translate(339.000000, 0.000000)">
-                <rect id="Rectangle-13" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
+            <g id="Din" transform="translate(368.000000, 0.000000)">
+                <rect id="Rectangle-13" stroke="#0B2E56" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
                 <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
                     <tspan x="12.5009766" y="39">D</tspan>
                 </text>
             </g>
-            <g id="Letter" transform="translate(399.000000, 0.000000)">
-                <rect id="Rectangle-13" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
+            <g id="Ein" transform="translate(428.000000, 0.000000)">
+                <rect id="Rectangle-13" stroke="url(#linearGradient-4)" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
                 <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
                     <tspan x="13.4941406" y="39">E</tspan>
                 </text>
             </g>
-            <g id="Letter" transform="translate(519.000000, 0.000000)">
-                <rect id="Rectangle-13" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
+            <g id="Gin" transform="translate(548.000000, 0.000000)">
+                <rect id="Rectangle-13" stroke="url(#linearGradient-4)" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
                 <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
                     <tspan x="11.4990234" y="39">G</tspan>
                 </text>
             </g>
-            <g id="Letter" transform="translate(579.000000, 0.000000)">
-                <rect id="Rectangle-13" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
+            <g id="Hin" transform="translate(608.000000, 0.000000)">
+                <rect id="Rectangle-13" stroke="url(#linearGradient-4)" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
                 <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
                     <tspan x="12.5009766" y="39">H</tspan>
                 </text>
             </g>
-            <g id="Letter" transform="translate(459.000000, 0.000000)">
-                <rect id="Rectangle-13" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
+            <g id="Fin" transform="translate(488.000000, 0.000000)">
+                <rect id="Rectangle-13" stroke="url(#linearGradient-4)" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
                 <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
                     <tspan x="14.5048828" y="39">F</tspan>
                 </text>
             </g>
-            <g id="Letter" transform="translate(219.000000, 0.000000)">
-                <rect id="Rectangle-13" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
+            <g id="Bin" transform="translate(248.000000, 0.000000)">
+                <rect id="Rectangle-13" stroke="url(#linearGradient-4)" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
                 <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
                     <tspan x="13.4941406" y="39">B</tspan>
                 </text>
             </g>
-            <g id="Letter" transform="translate(279.000000, 0.000000)">
-                <rect id="Rectangle-13" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
+            <g id="Cin" transform="translate(308.000000, 0.000000)">
+                <rect id="Rectangle-13" stroke="url(#linearGradient-4)" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup" x="0" y="0" width="52" height="52" rx="5"></rect>
                 <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="36" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
                     <tspan x="12.5009766" y="39">C</tspan>
                 </text>
             </g>
         </g>
-        <g id="gate" sketch:type="MSLayerGroup" transform="translate(619.000000, 396.000000)">
-            <g id="Rectangle-13" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup">
-                <rect x="0" y="0" width="52" height="52" rx="5"></rect>
-            </g>
-            <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="25" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
-                <tspan x="13.6572266" y="33">S</tspan>
-                <tspan x="30.3320312" y="33" font-size="18">0</tspan>
-            </text>
-        </g>
-        <g id="plus" sketch:type="MSLayerGroup" transform="translate(726.000000, 142.000000)">
+        <g id="hchplus" sketch:type="MSLayerGroup" transform="translate(756.000000, 86.000000)">
             <g id="gate" transform="translate(4.000000, 10.000000)" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup">
                 <rect id="Rectangle-13" x="0" y="0" width="31" height="31" rx="5"></rect>
             </g>
@@ -267,7 +259,7 @@
                 <tspan x="8.69628906" y="35">+</tspan>
             </text>
         </g>
-        <g id="plus" sketch:type="MSLayerGroup" transform="translate(806.000000, 143.000000)">
+        <g id="wkplus" sketch:type="MSLayerGroup" transform="translate(836.000000, 87.000000)">
             <g id="gate" transform="translate(4.000000, 10.000000)" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup">
                 <rect id="Rectangle-13" x="0" y="0" width="31" height="31" rx="5"></rect>
             </g>
@@ -275,26 +267,61 @@
                 <tspan x="8.69628906" y="35">+</tspan>
             </text>
         </g>
-        <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="25" font-weight="normal" sketch:alignment="middle" fill="#4A4A4A">
-            <tspan x="815.473389" y="106">w</tspan>
-            <tspan x="833.527588" y="106" font-size="18">i</tspan>
-        </text>
-        <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="25" font-weight="normal" sketch:alignment="middle" fill="#4A4A4A">
-            <tspan x="885.250488" y="176">k</tspan>
-            <tspan x="897.750488" y="176" font-size="18">i</tspan>
-        </text>
-        <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="25" font-weight="normal" fill="#979797">
-            <tspan x="753" y="302">t</tspan>
-            <tspan x="759.945801" y="302" font-size="18">1</tspan>
-        </text>
-        <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="25" font-weight="normal" fill="#979797">
-            <tspan x="753" y="472">t</tspan>
-            <tspan x="759.945801" y="472" font-size="18">1</tspan>
-            <tspan x="769.956543" y="472">+t</tspan>
-            <tspan x="791.501953" y="472" font-size="18">2</tspan>
-        </text>
-        <text id="One-SHA-256-round" sketch:type="MSTextLayer" font-family="Helvetica" font-size="25" font-weight="normal" sketch:alignment="middle" fill="#4A4A4A">
-            <tspan x="324.237061" y="24">One SHA-256 round</tspan>
-        </text>
+        <g id="t1gate" sketch:type="MSLayerGroup" transform="translate(776.000000, 222.000000)">
+            <rect id="Rectangle-29" sketch:type="MSShapeGroup" x="0" y="3" width="39" height="34"></rect>
+            <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="25" font-weight="normal" fill="#979797">
+                <tspan x="7" y="24">t</tspan>
+                <tspan x="13.9458008" y="24" font-size="18">1</tspan>
+            </text>
+        </g>
+        <g id="tsumgate" sketch:type="MSLayerGroup" transform="translate(776.000000, 392.000000)">
+            <rect id="Rectangle-29" sketch:type="MSShapeGroup" x="0" y="0" width="60" height="34"></rect>
+            <text id="A" sketch:type="MSTextLayer" font-family="Helvetica" font-size="25" font-weight="normal" fill="#979797">
+                <tspan x="7" y="24">t</tspan>
+                <tspan x="13.9458008" y="24" font-size="18">1</tspan>
+                <tspan x="23.956543" y="24">+t</tspan>
+                <tspan x="45.5019531" y="24" font-size="18">2</tspan>
+            </text>
+        </g>
+        <g id="win" sketch:type="MSLayerGroup" transform="translate(836.000000, 21.000000)">
+            <rect id="Rectangle-13" fill="url(#linearGradient-5)" sketch:type="MSShapeGroup" x="0" y="0" width="40" height="40" rx="5"></rect>
+            <text id="w" sketch:type="MSTextLayer" font-family="Helvetica" font-size="25" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="8.47290039" y="26">w</tspan>
+            </text>
+            <text id="i" sketch:type="MSTextLayer" font-family="Helvetica" font-size="20" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="27.2783203" y="31">i</tspan>
+            </text>
+        </g>
+        <g id="kin" sketch:type="MSLayerGroup" transform="translate(914.000000, 91.000000)">
+            <rect id="Rectangle-13" fill="url(#linearGradient-5)" sketch:type="MSShapeGroup" x="0" y="0" width="40" height="40" rx="5"></rect>
+            <text id="k" sketch:type="MSTextLayer" font-family="Helvetica" font-size="25" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="12.25" y="26">k</tspan>
+            </text>
+            <text id="i" sketch:type="MSTextLayer" font-family="Helvetica" font-size="20" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="26.2783203" y="31">i</tspan>
+            </text>
+        </g>
+        <g id="S1gate" sketch:type="MSLayerGroup" transform="translate(649.000000, 164.000000)">
+            <g id="gate" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup">
+                <rect id="Rectangle-13" x="0" y="0" width="52" height="52" rx="5"></rect>
+            </g>
+            <text id="S" sketch:type="MSTextLayer" font-family="Helvetica" font-size="25" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="13.1625977" y="34">S</tspan>
+            </text>
+            <text id="1" sketch:type="MSTextLayer" font-family="Helvetica" font-size="20" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="29.9384766" y="39">1</tspan>
+            </text>
+        </g>
+        <g id="S0gate" sketch:type="MSLayerGroup" transform="translate(649.000000, 340.000000)">
+            <g id="gate" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup">
+                <rect id="Rectangle-13" x="0" y="0" width="52" height="52" rx="5"></rect>
+            </g>
+            <text id="S" sketch:type="MSTextLayer" font-family="Helvetica" font-size="25" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="13.1625977" y="34">S</tspan>
+            </text>
+            <text id="0" sketch:type="MSTextLayer" font-family="Helvetica" font-size="20" font-weight="normal" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="29.9384766" y="39">0</tspan>
+            </text>
+        </g>
     </g>
 </svg>
