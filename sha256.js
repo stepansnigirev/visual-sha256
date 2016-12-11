@@ -61,7 +61,7 @@ Number.prototype.toByteArray = function(len = 8) {
 };
 
 Number.prototype.rotateRight = function(shift = 1, len = 32){
-	return (this >>> shift) | ((this << (len - shift))%(2**len));
+	return (this >>> shift) | ((this << (len - shift)) % (Math.pow(2,len)));
 }
 
 Number.prototype.toBinaryString = function(len=32){
@@ -112,7 +112,7 @@ function get_hk(i, root = 2){
 		i: i,
 		prime: primes[i],
 	};
-	d.root = d.prime**(1/root);
+	d.root = Math.pow(d.prime, 1 / root);
 	d.fraction = d.root - Math.floor(d.root);
 	d.value = parseInt("0x"+d.fraction.toString(16).substr(2,8));
 	d.str = String.fromCharCode.apply(null, d.value.toByteArray(4)).toByteString();
@@ -163,7 +163,7 @@ function sha256(msg){
 				(chunk.words[j-2].value >>> 10))>>>0;
 			word.s1 = s1;
 
-			word.value = ((s0 + s1 + chunk.words[j-16].value + chunk.words[j-7].value)%(2**32)>>>0)
+			word.value = ((s0 + s1 + chunk.words[j-16].value + chunk.words[j-7].value)%(Math.pow(2,32))>>>0)
 			chunk.words.push(word);
 		}
 		d.chunks.push(chunk);
@@ -335,12 +335,12 @@ function render(){
 
 function recalc(){
 	scope = sha256(scope.message);
-	console.log(scope);
 	render();
 }
 
 $(document).ready(function(){
 	scope.message = $('#message').val();
+	$("#message").select();
 
 	$("#message").change(function(){
 		scope.message = $('#message').val();
@@ -353,45 +353,45 @@ $(document).ready(function(){
 	});
 
 	$("#nexth").click(function(e){
-		e.preventDefault();
+		// e.preventDefault();
 		display.init.h--;
 		render();
 	});
 	$("#prevh").click(function(e){
-		e.preventDefault();
+		// e.preventDefault();
 		display.init.h++;
 		render();
 	});
 
 	$("#nextk").click(function(e){
-		e.preventDefault();
+		// e.preventDefault();
 		display.init.k--;
 		render();
 	});
 	$("#prevk").click(function(e){
-		e.preventDefault();
+		// e.preventDefault();
 		display.init.k++;
 		render();
 	});
 
 	$("#nextchunk").click(function(e){
-		e.preventDefault();
+		// e.preventDefault();
 		display.word.chunk--;
 		render();
 	});
 	$("#prevchunk").click(function(e){
-		e.preventDefault();
+		// e.preventDefault();
 		display.word.chunk++;
 		render();
 	});
 
 	$("#nextw").click(function(e){
-		e.preventDefault();
+		// e.preventDefault();
 		display.word.w--;
 		render();
 	});
 	$("#prevw").click(function(e){
-		e.preventDefault();
+		// e.preventDefault();
 		display.word.w++;
 		render();
 	});
@@ -406,7 +406,4 @@ $(document).ready(function(){
 	});
 
 	recalc(message);
-
-	// $("#message").focus();
-	$("#message").select();
 });

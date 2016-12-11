@@ -27,7 +27,7 @@
 		<h2>Step 1. Preparing the message.</h2>
 
 		<p>
-			Currently our message is <code data="len">&nbsp;</code> bits long (<code data="bytelen">&nbsp;</code> bytes). We need to append to the message its length in bits as a 64-bit integer and make the total length at least 512 bits long (64 bytes) or multiple of it. The length should be appended at the very end of the message. Right after the message we add one bit equal to 1 and then put zeros to make total length in bits multiple of 512.
+			Currently our message is <code data="len">480</code> bits long (<code data="bytelen">60</code> bytes). We need to append to the message its length in bits as a 64-bit integer and make the total length at least 512 bits long (64 bytes) or multiple of it. The length should be appended at the very end of the message. Right after the message we add one bit equal to 1 and then put zeros to make total length in bits multiple of 512.
 		</p>
 
 		<p class="important center">
@@ -254,6 +254,78 @@
 		</span>
 
 		<h2>Step 3.2. Hashing rounds.</h2>
+
+		<p>
+			Now, when we finally made all preparations, calculated all the constants, words and initial hashes, we can start.
+		</p>
+		<p>
+			During calculations we will be messing with 8 variables - <b>A</b>, <b>B</b>, <b>C</b>, <b>D</b>, <b>E</b>, <b>F</b>, <b>G</b>, <b>H</b>. We initialize them with our hash variables h<sub>0</sub>-h<sub>7</sub>. In every round we will be calculating another 6 variables - <b>S<sub>1</sub></b>, <b>ch</b>, <b>t<sub>1</sub></b>, <b>S<sub>0</sub></b>, <b>maj</b> and <b>t<sub>2</sub></b>.
+		</p>
+		<p>
+			Calculations in equations look terrible, so I would better put a picture. Calculations are still there though.
+		</p>
+		<p class="center">
+			<img src="sha256.svg" style="max-width: 600px" />
+		</p>
+		<p>
+			In round <b>i</b> we calculate them as follows:
+		</p>
+
+		<div class="column2">
+			<div>
+			    <p class="line"></p>
+				<p class="line">
+			        <b>S<sub>1</sub></b> = (E<sub>i-1</sub> >>> 6) ⊕ (E<sub>i-1</sub> >>> 11) ⊕ (E<sub>i-1</sub> >>> 25)
+			    </p>
+			    <p class="line">
+			        <b>ch</b> = (E<sub>i-1</sub> &amp; F<sub>i-1</sub>) ⊕ ((¬E<sub>i-1</sub>) &amp; G<sub>i-1</sub>)
+			    </p>
+			    <p class="line">
+			        <b>t<sub>1</sub></b> = H<sub>i-1</sub> + S<sub>1</sub> + ch + k<sub>i</sub> + w<sub>i</sub>
+			    </p>
+			    <p class="line">
+			        <b>S<sub>0</sub></b> = (A<sub>i-1</sub> >>> 2) ⊕ (A<sub>i-1</sub> >>> 13) ⊕ (A<sub>i-1</sub> >>> 22)
+			    </p>
+			    <p class="line">
+			        <b>maj</b> = (A<sub>i-1</sub> &amp; B<sub>i-1</sub>) ⊕ (A<sub>i-1</sub> &amp; C<sub>i-1</sub>) ⊕ (B<sub>i-1</sub> &amp; C<sub>i-1</sub>)
+			    </p>
+			    <p class="line">
+			        <b>t<sub>2</sub></b> = S<sub>0</sub> + maj
+			    </p>
+			    <p class="line"></p>
+			</div>
+
+			<div>
+			    <p class="line">
+					<b>H<sub>i</sub></b> = G<sub>i-1</sub>
+				</p>
+				<p class="line">
+					<b>G<sub>i</sub></b> = F<sub>i-1</sub>
+				</p>
+				<p class="line">
+					<b>F<sub>i</sub></b> = E<sub>i-1</sub>
+				</p>
+				<p class="line">
+					<b>E<sub>i</sub></b> = D<sub>i-1</sub> + t<sub>1</sub>
+				</p>
+				<p class="line">
+					<b>D<sub>i</sub></b> = C<sub>i-1</sub>
+				</p>
+				<p class="line">
+					<b>C<sub>i</sub></b> = B<sub>i-1</sub>
+				</p>
+				<p class="line">
+					<b>B<sub>i</sub></b> = A<sub>i-1</sub>
+				</p>
+				<p class="line">
+					<b>A<sub>i</sub></b> = t<sub>1</sub> + t<sub>2</sub>
+				</p>
+			</div>
+		</div>
+
+		<p>
+			After 64 rounds we add obtained values of <b>A</b>, <b>B</b>, <b>C</b>, <b>D</b>, <b>E</b>, <b>F</b>, <b>G</b> and <b>H</b> to our hash variables h<sub>0</sub>-h<sub>7</sub> and move to the next chunk. We repeat this procedure with all chunks and then concatenate all hash varuables togeather to recieve final result.
+		</p>
 
 	</div>
 
