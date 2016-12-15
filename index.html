@@ -20,9 +20,8 @@
 
 		<input type="text" id="message" value="Let's hash something! Long enough to have multiple chunks...">
 
-		<p class="note center">
-			Resulting hash: <span data="hash">&nbsp;</span>
-		</p>
+		<h2>Resulting hash</h2>
+		<p class="important center final bytes" data="hash"></p>
 
 		<h2>Step 1. Preparing the message.</h2>
 
@@ -154,10 +153,10 @@
 		</p>
 
 		<p class="center important" id="w">
-			<span class="block">
-				<a class="nextchunk noselect multichunks">←</a>
+			<span class="block multichunks">
+				<a class="nextchunk noselect">←</a>
 				<b>Chunk <span class="chunk">0</span></b>
-				<a class="prevchunk noselect multichunks">→</a>
+				<a class="prevchunk noselect">→</a>
 			</span>
 			<span class="block">
 				<a id="nextw" class="noselect">←</a>
@@ -331,10 +330,10 @@
 			Calculations look terrible, so I would better put an interactive picture. Click on any of the squares to figure out the result.
 		</p>
 		<p class="important center" id="round">
-			<span class="block">
-				<a class="nextchunk noselect multichunks">←</a>
+			<span class="block multichunks">
+				<a class="nextchunk noselect">←</a>
 				<b>Chunk <span class="chunk">0</span></b>
-				<a class="prevchunk noselect multichunks">→</a>
+				<a class="prevchunk noselect">→</a>
 			</span>
 			<span class="block">
 				<a id="nextr" class="noselect">←</a>
@@ -351,7 +350,9 @@
 
 	</div>
 
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-	<script src="sha256.js"></script>
+<!-- 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+ -->
+ 	<script src="http://inside.com/cdn/libs/jquery/jquery.min.js"></script>
+ 	<script src="sha256.js"></script>
 </body>
 </html>

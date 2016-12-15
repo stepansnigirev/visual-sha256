@@ -86,6 +86,24 @@ Number.prototype.toByteString = function(len=4){
 	return res;
 }
 
+Array.prototype.rotate = (function() {
+    // save references to array functions to make lookup faster
+    var push = Array.prototype.push,
+        splice = Array.prototype.splice;
+
+    return function(count) {
+        var len = this.length >>> 0, // convert to uint
+            count = count >> 0; // convert to int
+
+        // convert count to value in range [0, len)
+        count = ((count % len) + len) % len;
+
+        // use splice.call() instead of this.splice() to make function generic
+        push.apply(this, splice.call(this, 0, count));
+        return this;
+    };
+})();
+
 // we will store all data for hashing here
 var scope = {};
 
@@ -127,7 +145,7 @@ function sha256(msg){
 		h: [],
 		k: [],
 		chunks: [],
-		hash: "nothing yet",
+		hash: "",
 	}
 	for (var i = 0; i < 8; i++) {
 		d.h.push(get_hk(i));
@@ -139,7 +157,8 @@ function sha256(msg){
 	for (var i = 0; i < chunknum; i++) {
 		var chunk = {
 			message: scope.message.normalize().substr(64*i,64),
-			words: []
+			words: [],
+			rounds: [], // will be used later
 		};
 		for (var j = 0; j < 16; j++) {
 			var word = {
@@ -168,6 +187,44 @@ function sha256(msg){
 		}
 		d.chunks.push(chunk);
 	}
+	var h0 = [];
+	for (var i = 0; i < d.h.length; i++) {
+		h0.push(d.h[i].value);
+	}
+
+	for (var i = 0; i < d.chunks.length; i++) {
+		var hin = h0.slice();
+		var rounds = [];
+		for (var r = 0; r < 64; r++) {
+			var round = {
+				hin: hin.slice(),
+				hout: hin.slice().rotate(-1),
+			};
+			var A,B,C,D,E,F,G,H;
+			[A,B,C,D,E,F,G,H] = hin.slice();
+			round.S1 = (E.rotateRight(6) ^
+						E.rotateRight(11) ^
+						E.rotateRight(25)) >>> 0;
+			round.ch = ((E & F) ^ ((~E) & G)) >>> 0;
+			round.t1 = ((H + round.S1 + round.ch + d.k[r].value + d.chunks[i].words[r].value)%(Math.pow(2,32))>>>0);
+			round.S0 = (A.rotateRight(2) ^
+						A.rotateRight(13) ^
+						A.rotateRight(22)) >>> 0;
+			round.maj = ((A & B) ^ (A & C) ^ (B & C)) >>> 0;
+			round.t2 = ((round.S0 + round.maj)%(Math.pow(2,32))>>>0);
+			round.hout[4] = ((round.hout[4]+round.t1)%(Math.pow(2,32))>>>0);
+			round.hout[0] = ((round.t1+round.t2)%(Math.pow(2,32))>>>0);
+			d.chunks[i].rounds.push(round);
+			hin = round.hout.slice();
+		}
+		for (var j = 0; j < d.h.length; j++) {
+			h0[j] = (hin[j]+h0[j])%(Math.pow(2,32))>>>0;
+		}
+	}
+	for (var i = 0; i < h0.length; i++) {
+		d.hash += h0[i].toByteString();
+	}
+	d.hash = d.hash.replace(/ /g, "");
 	return d;
 }
 
@@ -216,7 +273,7 @@ function check_display(){
 		$(".w-calc").hide();
 	}
 	var chunknum = Math.floor(scope.message.normalize().length/64);
-	display.word.chunk = (display.word.chunk + 64) % chunknum;
+	display.word.chunk = (display.word.chunk + chunknum) % chunknum;
 	if(chunknum == 1){
 		$(".multichunks").hide();
 	}else{
@@ -227,6 +284,8 @@ function check_display(){
 function render(){
 
 	check_display();
+
+	$("*[data='hash']").html(scope.hash);
 
 	// Step 1. Preparing message
 	$("*[data='len']").html(scope.message.length * 8);
@@ -362,45 +421,37 @@ $(document).ready(function(){
 	});
 
 	$("#nexth").click(function(e){
-		// e.preventDefault();
 		display.init.h--;
 		render();
 	});
 	$("#prevh").click(function(e){
-		// e.preventDefault();
 		display.init.h++;
 		render();
 	});
 
 	$("#nextk").click(function(e){
-		// e.preventDefault();
 		display.init.k--;
 		render();
 	});
 	$("#prevk").click(function(e){
-		// e.preventDefault();
 		display.init.k++;
 		render();
 	});
 
 	$(".nextchunk").click(function(e){
-		// e.preventDefault();
 		display.word.chunk--;
 		render();
 	});
 	$(".prevchunk").click(function(e){
-		// e.preventDefault();
 		display.word.chunk++;
 		render();
 	});
 
 	$("#nextw").click(function(e){
-		// e.preventDefault();
 		display.word.w--;
 		render();
 	});
 	$("#prevw").click(function(e){
-		// e.preventDefault();
 		display.word.w++;
 		render();
 	});

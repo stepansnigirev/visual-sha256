@@ -55,7 +55,7 @@ p{
 	font-size: 12px;
 }
 .bytes, code{
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	font-family: 'Roboto Mono', 'Monaco', monospace;
 	font-weight: light;
 }
