@@ -116,6 +116,10 @@ var display = {
 	word: {
 		chunk: 0,
 		w: 0,
+	},
+	round: 0,
+	svg: {
+		selected: "Ain",
 	}
 };
 
@@ -206,6 +210,8 @@ function sha256(msg){
 						E.rotateRight(11) ^
 						E.rotateRight(25)) >>> 0;
 			round.ch = ((E & F) ^ ((~E) & G)) >>> 0;
+			round.kin = d.k[r].value;
+			round.win = d.chunks[i].words[r].value;
 			round.t1 = ((H + round.S1 + round.ch + d.k[r].value + d.chunks[i].words[r].value)%(Math.pow(2,32))>>>0);
 			round.S0 = (A.rotateRight(2) ^
 						A.rotateRight(13) ^
@@ -279,6 +285,7 @@ function check_display(){
 	}else{
 		$(".multichunks").show();
 	}
+	display.round = (display.round + 64) % 64;
 }
 
 function render(){
@@ -315,7 +322,7 @@ function render(){
 	$("#k .hex").html(k.fraction.toString(16).substr(0,12));
 	$("#k .final").html(k.str);
 
-	// Step 3. Words and chunks
+	// Step 3.1 Words and chunks
 	var w = display.word.w;
 	var chunk = display.word.chunk;
 	var chunkmsg = scope.chunks[chunk].message;
@@ -352,10 +359,10 @@ function render(){
 			if(repr == 'note'){
 				var sfx = "";
 				if(rotate!=0){
-					sfx = " >>> "+rotate.toString();
+					sfx = " ⋙ "+rotate.toString();
 				}
 				if(shift!=0){
-					sfx = " >> "+shift.toString();
+					sfx = " ≫ "+shift.toString();
 				}
 				str = "w<sub>"+(w-offs).toString()+"</sub>"+sfx+" &nbsp; ("+
 					v.toByteString()+")";
@@ -390,6 +397,49 @@ function render(){
 		scope.chunks[chunk].words[w].value.toByteString()
 	);
 
+	// Step 3.1 Words and chunks
+	var round = display.round;
+	$("#round .num").html(round);
+
+	var res = scope.chunks[chunk].rounds[round];
+	console.log(res);
+	var n = svgelements.indexOf(display.svg.selected);
+	var v = 0;
+	if(n>=0 && n<8){
+		v = res.hin[n];
+	}
+	if(n>=8 && n<16){
+		v = res.hout[n-8];
+	}
+	if(display.svg.selected == "kin"){
+		v = res.kin;
+	}
+	if(display.svg.selected == "win"){
+		v = res.win;
+	}
+	if(display.svg.selected == "Chgate"){
+		v = res.ch;
+	}
+	if(display.svg.selected == "S1gate"){
+		v = res.S1;
+	}
+	if(display.svg.selected == "S0gate"){
+		v = res.S0;
+	}
+	if(display.svg.selected == "Majgate"){
+		v = res.maj;
+	}
+	if(display.svg.selected == "t1gate"){
+		v = res.t1;
+	}
+	if(display.svg.selected == "tsumgate"){
+		v = res.hout[0];
+	}
+
+	$("*[data='v']").html(
+		v.toByteString()
+	);
+
 }
 
 function log(){
@@ -401,10 +451,12 @@ function recalc(){
 	render();
 }
 
-svgelements = ["#Ain","#Bin","#Cin","#Din","#Ein","#Fin","#Gin","#Hin",
-"#Aout","#Bout","#Cout","#Dout","#Eout","#Fout","#Gout","#Hout",
-"#Chgate","#Majgate","#S1gate","#S0gate","#kin","#win","#tsumgate","#t1gate",
-"#S1plus","#S0plus","#Majplus","#Dplus","#hchplus","#wkplus"]
+svgelements = [
+	"Ain","Bin","Cin","Din","Ein","Fin","Gin","Hin",
+	"Aout","Bout","Cout","Dout","Eout","Fout","Gout","Hout",
+	"Chgate","Majgate","S1gate","S0gate","kin","win","tsumgate","t1gate",
+	"S1plus","S0plus","Majplus","Dplus","hchplus","wkplus"
+]
 
 $(document).ready(function(){
 	scope.message = $('#message').val();
@@ -456,6 +508,15 @@ $(document).ready(function(){
 		render();
 	});
 
+	$("#nextr").click(function(e){
+		display.round--;
+		render();
+	});
+	$("#prevr").click(function(e){
+		display.round++;
+		render();
+	});
+
 	$("#show-s").click(function(){
 		$("#scalc").toggle();
 		if($("#scalc").is(':visible')){
@@ -466,13 +527,15 @@ $(document).ready(function(){
 	});
 
     $('#svgholder').load('sha256.svg', null, function(){
-    	$("#Ain").addClass("focus");
+    	$("#"+display.svg.selected).addClass("focus");
     	for (var i = 0; i < svgelements.length; i++) {
-    		$(svgelements[i]).click(function(){
+    		$("#"+svgelements[i]).click(function(){
     			for (var i = 0; i < svgelements.length; i++) {
-    				$(svgelements[i]).removeClass("focus");
+    				$("#"+svgelements[i]).removeClass("focus");
     			}
     			$(this).addClass("focus");
+    			display.svg.selected = $(this).attr("id");
+    			render();
     		});
     	}
     });
